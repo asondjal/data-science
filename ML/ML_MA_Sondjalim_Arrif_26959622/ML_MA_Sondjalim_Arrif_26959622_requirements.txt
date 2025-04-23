@@ -1,0 +1,9 @@
+
+Pip-Version: 24.1.1 
+Python-Version: 3.11.1
+Python implementation: CPython
+Pandas: 1.5.2
+Numpy: 1.24.1
+Matplotlib: 3.8.2
+Seaborn: 0.13.2
+Sklearn: Modul sklearn funktioniert, wird aber nicht angezeigt!! Befehl: py -m pip show  -> sklearn: WARNING: Package(s) not found: sklearn. 
