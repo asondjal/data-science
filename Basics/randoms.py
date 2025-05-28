@@ -1,6 +1,5 @@
 """Simple Python-File using random library"""
 
-from calendar import c
 import random
 random.seed()
 

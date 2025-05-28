@@ -16,6 +16,7 @@ entry.pack(pady=10)
 
 # Button mit Aktion
 def klicken():
+    """Funktion, die beim Klicken des Buttons ausgeführt wird"""
     eingabe = entry.get()
     label.config(text=f"Du hast eingegeben: {eingabe}")
 
