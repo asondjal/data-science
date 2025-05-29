@@ -1,0 +1,39 @@
+name: Python-Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Python einrichten
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Installation der Abhängigkeiten
+        run: |
+          sudo apt-get update
+          sudo apt-get install cmake g++ libpoppler-cpp-dev ccache -y
+          pip install pytest pybind11
+
+      - name: C++ Modul mit CMake bauen (Workflow-Build)
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: C++ Modul bauen (Workflow-Build)
+        run: cmake --build build --config Release
+
+      - name: Python-Tests ausführen
+        env:
+          PYTHONPATH: ${{github.workspace}}/build
+        run: |
+          pytest tests
