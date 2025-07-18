@@ -11,39 +11,52 @@ set(CMAKE_CXX_COMPILER_LAUNCHER ccache)
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O2")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0 -Wall -Wextra -pedantic")
 
-# Haupt-Executable: supermarkt
+# Executable fuers Hauptprojekt
 add_executable(data-science 
     src/main.cpp
     src/read_data.cpp
     src/statistik.cpp
     src/logging.cpp
-
 )
+
+target_include_directories(data-science PRIVATE ${PROJECT_SOURCE_DIR}/inc)
+target_link_libraries(data-science PRIVATE poppler-cpp)
+target_compile_options(data-science PRIVATE -Wall -Wextra -pedantic)
+
+# Executable zum Testen der C++-Klassen
+add_executable(cpp_tests
+    src/read_data.cpp
+    src/statistik.cpp
+    src/logging.cpp
+    
+    cpp_tests/main.cpp
+    cpp_tests/test_read_data.cpp
+    cpp_tests/test_statistik.cpp
+    cpp_tests/test_logging.cpp
+)
+
+target_include_directories(cpp_tests PRIVATE ${PROJECT_SOURCE_DIR}/inc)
+
+target_link_libraries(cpp_tests PRIVATE poppler-cpp)
+
+target_compile_options(cpp_tests PRIVATE -Wall -Wextra -pedantic)
 
 add_subdirectory(pybind11)
 find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
-
 target_link_libraries(data-science PRIVATE Python3::Python)
 
 include_directories(${Python3_INCLUDE_DIRS})
 include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${CMAKE_SOURCE_DIR}/pybind11/include)
 
-# pybind11_add_module(py_bindings
-#     bindings/python_bindings.cpp
+# Executable fuer die Integration von C++ in Python
+pybind11_add_module(py_bindings
+    bindings/python_bindings.cpp
     
-#     src/read_data.cpp
-#     src/statistik.cpp
-#     src/logging.cpp
-# )
-
-# target_link_libraries(py_bindings PRIVATE poppler-cpp)
-
-target_include_directories(data-science PRIVATE
-    inc/base
-    inc/utils
+    src/read_data.cpp
+    src/statistik.cpp
+    src/logging.cpp
 )
 
-target_link_libraries(data-science PRIVATE poppler-cpp)
-
-target_compile_options(data-science PRIVATE -Wall -Wextra -pedantic)
+target_link_libraries(py_bindings PRIVATE poppler-cpp)
+target_include_directories(py_bindings PRIVATE ${PROJECT_SOURCE_DIR}/inc)

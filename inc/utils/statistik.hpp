@@ -1,37 +1,38 @@
-#ifndef STATISTIK_HPP_
-#define STATISTIK_HPP_
+#ifndef INC_UTILS_STATISTIK_HPP_
+#define INC_UTILS_STATISTIK_HPP_
 
-#include "read_data.hpp"
-#include <vector>
-#include <string>
 #include <algorithm>
-#include <numeric>
+#include <cmath>
 #include <iomanip>
 #include <iostream>
+#include <numeric>
 #include <regex>
-#include <cmath>
+#include <string>
+#include <vector>
+
+#include "utils/read_data.hpp"
 
 class Statistik {
-public:
-    explicit Statistik();
-    void LadeDaten(ReadData& reader);
-    void EntferneDaten(const std::string& data);
-    uint32_t ZaehleEintraege() const;
-    uint32_t ZaehleLinien() const;
-    uint32_t ZaehleWorte() const;
-    uint32_t ZaehleZeichen() const;
-    uint32_t ZaehleVariable(std::string variable) const;
-    float Mittelwert() const;
-    float Median() const;
-    float Erwartungswert() const;
-    float Standardabweichung() const;
+ public:
+  explicit Statistik();
+  void LadeDaten(ReadData& reader);
+  void EntferneDaten(const std::string& data);
+  uint32_t ZaehleEintraege() const;
+  uint32_t ZaehleLinien() const;
+  uint32_t ZaehleWorte() const;
+  uint32_t ZaehleZeichen() const;
+  uint32_t ZaehleVariable(std::string variable) const;
+  float Mittelwert() const;
+  float Median() const;
+  float Erwartungswert() const;
+  float Standardabweichung() const;
 
-private:
-    std::vector<std::string> datenBuffer_;
-    mutable std::mutex datenMutex_;
+ private:
+  std::vector<std::string> datenBuffer_;
+  mutable std::mutex datenMutex_;
 
-    float Varianz() const;
-    float MittelwertIntern() const;
+  float Varianz() const;
+  float MittelwertIntern() const;
 };
 
-#endif /* STATISTIK_HPP_ */
+#endif  // INC_UTILS_STATISTIK_HPP_
