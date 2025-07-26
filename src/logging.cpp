@@ -1,4 +1,4 @@
-#include "../inc/utils/logging.hpp"
+#include "utils/logging.hpp"
 
 /**
  * @brief Konstruktor der Klasse Logging
