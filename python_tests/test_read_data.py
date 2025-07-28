@@ -32,8 +32,8 @@ def test_read_data():
         assert len(content) > 0
 
     auto_data = ReadData("logfile.txt")
-    auto_data.read_auto()
-    assert auto_data.read_auto() is not None
+    auto_data.read_auto(False)
+    assert auto_data.read_auto(False) is not None
     with open("logfile.txt", "r", encoding="utf-8") as f:
         file_content = f.read()
-        assert auto_data.read_auto() == file_content
+        assert auto_data.read_auto(False) == file_content

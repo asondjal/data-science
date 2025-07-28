@@ -23,7 +23,7 @@ class ReadData:
     def read_pdf(self) -> str:
         """Lese Daten aus einer PDF-Datei"""
 
-    def read_auto(self) -> str:
+    def read_auto(self, reload = False) -> str:
         """Lese Daten aus einer Datei, die automatisch erkannt wird."""
 
 class Statistik:
