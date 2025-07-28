@@ -80,7 +80,7 @@ std::string ReadData::ReadHTML() const { return ReadFile(); }
 /**
  * @brief Liest den Inhalt einer XML-Datei aus und gibt den Inhalt als String zurück
  */
-void ReadData::ReadXML() {
+std::string ReadData::ReadXML() const {
   tinyxml2::XMLDocument doc;
   auto result = doc.LoadFile(filePath_.c_str());
 
@@ -89,9 +89,11 @@ void ReadData::ReadXML() {
   }
 
   tinyxml2::XMLElement* root = doc.RootElement();
+  std::stringstream ss;
   if (root) {
-    std::cout << "Root-Element: " << root->Name() << std::endl;
+    ss << "Root-Element: " << root->Name();
   }
+  return ss.str();
 }
 
 /**

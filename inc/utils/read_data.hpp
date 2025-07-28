@@ -22,7 +22,7 @@ class ReadData {
   std::string ReadPDF() const;
   std::string ReadAuto(bool reload = false) const;
   std::string ReadHTML() const;
-  void ReadXML();
+  std::string ReadXML() const;
   void InvalidateCache() const;
 
  private:

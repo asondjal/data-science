@@ -20,13 +20,9 @@ add_executable(data-science
     src/logging.cpp
 )
 
-# Dateien zur Verarbeitung von XML-Dateien
-find_package(TinyXML2 REQUIRED)
-target_link_libraries(data-science PRIVATE ${TinyXML2_LIBRARIES})
-target_link_libraries(data-science PRIVATE tinyxml2)
-
 target_include_directories(data-science PRIVATE ${PROJECT_SOURCE_DIR}/inc)
 target_link_libraries(data-science PRIVATE poppler-cpp)
+target_link_libraries(data-science PRIVATE tinyxml2)
 target_compile_options(data-science PRIVATE -Wall -Wextra -pedantic)
 
 # Executable zum Testen der C++-Klassen
