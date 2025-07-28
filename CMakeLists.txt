@@ -22,6 +22,7 @@ add_executable(data-science
 
 # Dateien zur Verarbeitung von XML-Dateien
 find_package(TinyXML2 REQUIRED)
+target_link_libraries(data-science PRIVATE ${TinyXML2_LIBRARIES})
 target_link_libraries(data-science PRIVATE tinyxml2)
 
 target_include_directories(data-science PRIVATE ${PROJECT_SOURCE_DIR}/inc)
