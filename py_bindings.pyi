@@ -23,8 +23,17 @@ class ReadData:
     def read_pdf(self) -> str:
         """Lese Daten aus einer PDF-Datei"""
 
-    def read_auto(self, reload = False) -> str:
+    def read_html(self) -> str:
+        """Lese Daten aus einer HTML-Datei"""
+
+    def read_xml(self) -> str:
+        """Lese Daten aus einer XML-Datei"""
+
+    def read_auto(self, reload=False) -> str:
         """Lese Daten aus einer Datei, die automatisch erkannt wird."""
+
+    def display_data(self, print_data=True) -> list:
+        """Wiedergabe der gespeicherten Daten als Dictionary"""
 
 class Statistik:
     """Klasse zur Berechnung von Statistiken."""

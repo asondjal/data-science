@@ -23,7 +23,8 @@ class ReadData {
   std::string ReadAuto(bool reload = false) const;
   std::string ReadHTML() const;
   std::string ReadXML() const;
-  void InvalidateCache() const;
+  std::vector<std::string> DisplayData(bool print = true) const;
+  void ObserveCache() const; // Muss ueberprueft und verbessert werden
 
  private:
   std::string filePath_;

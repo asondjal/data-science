@@ -2,6 +2,7 @@
 
 from py_bindings import ReadData
 
+
 def test_read_data():
     """Funktion zum Testen von ReadData"""
     read_data = ReadData("./data/supermarkt_0/produkte.txt")
@@ -25,8 +26,6 @@ def test_read_data():
         file_content = f.read()
         assert json_data.read_json() == file_content
 
-    # Alternative: test PDF reading without PyPDF2 or external libraries
-    # This will just check if the file can be opened and is not empty
     with open("README.pdf", "rb") as f:
         content = f.read()
         assert len(content) > 0
@@ -37,3 +36,9 @@ def test_read_data():
     with open("logfile.txt", "r", encoding="utf-8") as f:
         file_content = f.read()
         assert auto_data.read_auto(False) == file_content
+
+    data = read_data.display_data(True)
+    print(data)
+
+
+test_read_data()

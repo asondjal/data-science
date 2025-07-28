@@ -13,7 +13,10 @@ PYBIND11_MODULE(py_bindings, py_module) {
         .def("read_csv", &ReadData::ReadCSV)
         .def("read_json", &ReadData::ReadJSON)
         .def("read_pdf", &ReadData::ReadPDF)
-        .def("read_auto", &ReadData::ReadAuto);
+        .def("read_auto", &ReadData::ReadAuto)
+        .def("read_html", &ReadData::ReadHTML)
+        .def("read_xml", &ReadData::ReadXML)
+        .def("display_data", &ReadData::DisplayData);
 
     py::class_<Statistik>(py_module, "Statistik")
         .def(py::init<>())

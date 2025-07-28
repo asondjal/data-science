@@ -40,6 +40,17 @@ void TestReadData() {
   std::string data_content((std::istreambuf_iterator<char>(produkt_file)),
                            std::istreambuf_iterator<char>());
   assert(data == data_content);
+  std::vector<std::string> data_set = inventur.DisplayData();
+  std::ifstream produkt_file_lines("./data/supermarkt_1/produkte.txt");
+  std::vector<std::string> expected_lines;
+  std::string line;
+  while (std::getline(produkt_file_lines, line)) {
+    expected_lines.push_back(line);
+  }
+  assert(data_set == expected_lines);
+  // inventur.ObserveCache();
+  // std::vector<std::string> new_data_set = inventur.DisplayData();
+  // assert(data_set == std::vector<std::string>{});
 
   ReadData kunden{"./data/supermarkt_0/kunden.txt"};
   std::string kundenData = kunden.ReadTxt();

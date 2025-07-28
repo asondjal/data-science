@@ -5,9 +5,9 @@ ReadData::ReadData(const std::string& path) : filePath_{path} {}
 std::mutex& ReadData::GetMutex() { return mtx_; }
 
 /**
- * @brief Speicherverwaltung vom Cache --> Muss noch implementiert werden!!
+ * @brief Speicherverwaltung vom Cache --> Muss noch getestet werden!!
  */
-void ReadData::InvalidateCache() const {
+void ReadData::ObserveCache() const {
   is_cached_ = false;
   cache_.clear();
 }
@@ -130,3 +130,35 @@ std::string ReadData::ReadAuto(bool reload) const {
   is_cached_ = true;
   return cache_;
 }
+
+/**
+ * @brief Wiedergabe der im Buffer gespeicherten Informationen
+ * @param bool print, `true` per Default, sonst `false`
+ */
+std::vector<std::string> ReadData::DisplayData(bool print) const {
+  std::lock_guard<std::mutex> lock(mtx_);  // Schutz vor Race Conditions
+
+  if (!std::filesystem::exists(filePath_)) {
+    throw std::runtime_error("Nicht existierende Datei: " + filePath_);
+  }
+
+  std::ifstream file(filePath_);
+  if (!file.is_open()) {
+    throw std::runtime_error("Fehler beim Öffnen der Datei: " + filePath_);
+  }
+
+  std::vector<std::string> lines;
+  std::string line;
+  int line_number = 1;
+
+  while (std::getline(file, line)) {
+    lines.push_back(line);
+    if (print) {
+      std::cout << "[Zeile " << line_number << ": \"" << line << "\"]" << std::endl;
+    }
+    ++line_number;
+  }
+  return lines;
+
+}
+
