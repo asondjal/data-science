@@ -159,6 +159,4 @@ std::vector<std::string> ReadData::DisplayData(bool print) const {
     ++line_number;
   }
   return lines;
-
 }
-
