@@ -11,6 +11,7 @@ set(CMAKE_CXX_COMPILER_LAUNCHER ccache)
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O2")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0 -Wall -Wextra -pedantic")
 
+
 # Executable fuers Hauptprojekt
 add_executable(data-science 
     src/main.cpp
@@ -18,6 +19,10 @@ add_executable(data-science
     src/statistik.cpp
     src/logging.cpp
 )
+
+# Dateien zur Verarbeitung von XML-Dateien
+find_package(TinyXML2 REQUIRED)
+target_link_libraries(data-science PRIVATE tinyxml2)
 
 target_include_directories(data-science PRIVATE ${PROJECT_SOURCE_DIR}/inc)
 target_link_libraries(data-science PRIVATE poppler-cpp)
@@ -37,7 +42,10 @@ add_executable(cpp_tests
 
 target_include_directories(cpp_tests PRIVATE ${PROJECT_SOURCE_DIR}/inc)
 
-target_link_libraries(cpp_tests PRIVATE poppler-cpp)
+target_link_libraries(cpp_tests PRIVATE 
+    poppler-cpp
+    tinyxml2
+)
 
 target_compile_options(cpp_tests PRIVATE -Wall -Wextra -pedantic)
 
@@ -58,5 +66,8 @@ pybind11_add_module(py_bindings
     src/logging.cpp
 )
 
-target_link_libraries(py_bindings PRIVATE poppler-cpp)
+target_link_libraries(py_bindings PRIVATE 
+    poppler-cpp
+    tinyxml2
+)
 target_include_directories(py_bindings PRIVATE ${PROJECT_SOURCE_DIR}/inc)

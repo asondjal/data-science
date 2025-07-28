@@ -3,9 +3,11 @@
 
 #include <poppler/cpp/poppler-document.h>
 #include <poppler/cpp/poppler-page.h>
+#include <tinyxml2.h>
 
 #include <filesystem>
 #include <fstream>
+#include <iostream>
 #include <mutex>
 #include <string>
 #include <vector>
@@ -18,12 +20,17 @@ class ReadData {
   std::string ReadCSV() const;
   std::string ReadJSON() const;
   std::string ReadPDF() const;
-  std::string ReadAuto() const;
+  std::string ReadAuto(bool reload = false) const;
+  std::string ReadHTML() const;
+  void ReadXML();
+  void InvalidateCache() const;
 
  private:
   std::string filePath_;
   mutable std::mutex mtx_;
   std::mutex& GetMutex();
+  mutable std::string cache_;
+  mutable bool is_cached_ = false;
 };
 
 #endif  // INC_UTILS_READ_DATA_HPP_

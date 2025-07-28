@@ -2,3 +2,15 @@
 [26.07.2025 18:50:56] [DEBUG] Reading configuration...
 [26.07.2025 18:50:56] [WARNING] File not found!
 [26.07.2025 18:50:56] [ERROR] Critical error!
+[28.07.2025 18:32:01] [INFO] System initialized.
+[28.07.2025 18:32:01] [DEBUG] Reading configuration...
+[28.07.2025 18:32:01] [WARNING] File not found!
+[28.07.2025 18:32:01] [ERROR] Critical error!
+[28.07.2025 18:32:51] [INFO] System initialized.
+[28.07.2025 18:32:51] [DEBUG] Reading configuration...
+[28.07.2025 18:32:51] [WARNING] File not found!
+[28.07.2025 18:32:51] [ERROR] Critical error!
+[28.07.2025 19:03:29] [INFO] System initialized.
+[28.07.2025 19:03:29] [DEBUG] Reading configuration...
+[28.07.2025 19:03:29] [WARNING] File not found!
+[28.07.2025 19:03:29] [ERROR] Critical error!

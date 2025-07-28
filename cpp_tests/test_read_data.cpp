@@ -141,5 +141,16 @@ void TestReadData() {
                                 std::istreambuf_iterator<char>());
   assert(autoData == automated_content);
 
+  try {
+    ReadData htmlReader("beispiel.html");
+    std::string htmlContent = htmlReader.ReadHTML();
+    std::cout << "HTML-Inhalt:\n" << htmlContent << std::endl;
+
+    ReadData xmlReader("beispiel.xml");
+    xmlReader.ReadXML();
+  } catch (const std::exception& e) {
+    std::cerr << "Fehler: " << e.what() << std::endl;
+  }
+
   std::cout << "Alle Tests für ReadData waren erfolgreich!" << std::endl;
 }
