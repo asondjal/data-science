@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['varianz_0',['Varianz',['../classStatistik.html#aa2ecb64a1c33630a0f29677bb7a572fe',1,'Statistik']]]
+  ['_7elogging_0',['~Logging',['../classLogging.html#af6a0971121f5b0d9d6ebfb4e69b20a4d',1,'Logging']]]
 ];

@@ -1,0 +1,103 @@
+\doxysection{Logging Class Reference}
+\hypertarget{classLogging}{}\label{classLogging}\index{Logging@{Logging}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLogging_a81caf1fc6d473860f1a9eaa18e266b32}{Logging}} (const std\+::string \&log\+File\+Path, Log\+Level level=Log\+Level\+::\+INFO, bool console\+Output=true)
+\begin{DoxyCompactList}\small\item\em Konstruktor der Klasse \doxylink{classLogging}{Logging}. \end{DoxyCompactList}\item 
+\Hypertarget{classLogging_af6a0971121f5b0d9d6ebfb4e69b20a4d}\label{classLogging_af6a0971121f5b0d9d6ebfb4e69b20a4d} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Logging} ()
+\begin{DoxyCompactList}\small\item\em Destruktor der Klasse \doxylink{classLogging}{Logging} zum Schließen vom Log-\/\+File. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogging_ac3b0a6169117f682329c0b338d3ca637}{Log}} (const std\+::string \&message, Log\+Level level=Log\+Level\+::\+INFO)
+\begin{DoxyCompactList}\small\item\em Einschreiben von Status-\/\+Informationen in die Log-\/\+Datei. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogging_a7680e348ef27176f0012fc8d3ff2689b}{Set\+Level}} (Log\+Level level)
+\begin{DoxyCompactList}\small\item\em Setzen der Statusmeldung. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLogging_a5ea6668ec04538a9f7dc10d8efef6de5}{Enable\+Console\+Output}} (bool enable)
+\begin{DoxyCompactList}\small\item\em Setzen der Ausgabe der Konsole. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLogging_abeea6290aa588aaa24ebfedd06d96464}{Get\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Wiedergabe vom Level als String. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classLogging_a81caf1fc6d473860f1a9eaa18e266b32}\label{classLogging_a81caf1fc6d473860f1a9eaa18e266b32} 
+\index{Logging@{Logging}!Logging@{Logging}}
+\index{Logging@{Logging}!Logging@{Logging}}
+\doxysubsubsection{\texorpdfstring{Logging()}{Logging()}}
+{\footnotesize\ttfamily Logging\+::\+Logging (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{log\+File\+Path,  }\item[{Log\+Level}]{level = {\ttfamily LogLevel\+:\+:INFO},  }\item[{bool}]{console\+Output = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Konstruktor der Klasse \doxylink{classLogging}{Logging}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+File\+Path,level,console\+Output} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLogging_a5ea6668ec04538a9f7dc10d8efef6de5}\label{classLogging_a5ea6668ec04538a9f7dc10d8efef6de5} 
+\index{Logging@{Logging}!EnableConsoleOutput@{EnableConsoleOutput}}
+\index{EnableConsoleOutput@{EnableConsoleOutput}!Logging@{Logging}}
+\doxysubsubsection{\texorpdfstring{EnableConsoleOutput()}{EnableConsoleOutput()}}
+{\footnotesize\ttfamily void Logging\+::\+Enable\+Console\+Output (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Setzen der Ausgabe der Konsole. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLogging_abeea6290aa588aaa24ebfedd06d96464}\label{classLogging_abeea6290aa588aaa24ebfedd06d96464} 
+\index{Logging@{Logging}!GetLevel@{GetLevel}}
+\index{GetLevel@{GetLevel}!Logging@{Logging}}
+\doxysubsubsection{\texorpdfstring{GetLevel()}{GetLevel()}}
+{\footnotesize\ttfamily std\+::string Logging\+::\+Get\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wiedergabe vom Level als String. 
+
+\begin{DoxyReturn}{Returns}
+Status als String 
+\end{DoxyReturn}
+\Hypertarget{classLogging_ac3b0a6169117f682329c0b338d3ca637}\label{classLogging_ac3b0a6169117f682329c0b338d3ca637} 
+\index{Logging@{Logging}!Log@{Log}}
+\index{Log@{Log}!Logging@{Logging}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily void Logging\+::\+Log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{Log\+Level}]{level = {\ttfamily LogLevel\+:\+:INFO} }\end{DoxyParamCaption})}
+
+
+
+Einschreiben von Status-\/\+Informationen in die Log-\/\+Datei. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message,level} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLogging_a7680e348ef27176f0012fc8d3ff2689b}\label{classLogging_a7680e348ef27176f0012fc8d3ff2689b} 
+\index{Logging@{Logging}!SetLevel@{SetLevel}}
+\index{SetLevel@{SetLevel}!Logging@{Logging}}
+\doxysubsubsection{\texorpdfstring{SetLevel()}{SetLevel()}}
+{\footnotesize\ttfamily void Logging\+::\+Set\+Level (\begin{DoxyParamCaption}\item[{Log\+Level}]{level }\end{DoxyParamCaption})}
+
+
+
+Setzen der Statusmeldung. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/utils/logging.\+hpp\item 
+src/logging.\+cpp\end{DoxyCompactItemize}

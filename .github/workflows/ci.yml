@@ -47,6 +47,8 @@ jobs:
         run: cmake --build build --config Release
 
       - name: Python-Testabdeckung messen
+        env:
+          PYTHONPATH: ${{ github.workspace }}/build
         run: |
           pip install pytest-cov
           pytest --cov=python --cov-report=xml

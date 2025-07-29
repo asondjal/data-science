@@ -1,0 +1,159 @@
+\doxysection{Statistik Class Reference}
+\hypertarget{classStatistik}{}\label{classStatistik}\index{Statistik@{Statistik}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classStatistik_ae9a995e5098a101f05d0d7f7b73ca816}{Lade\+Daten}} (\mbox{\hyperlink{classReadData}{Read\+Data}} \&reader)
+\begin{DoxyCompactList}\small\item\em Lädt Daten aus einer Datei in den Datenpuffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStatistik_a93dde6a9c245462c325791eefa33af53}{Entferne\+Daten}} (const std\+::string \&data)
+\begin{DoxyCompactList}\small\item\em Entfernt Daten aus dem Datenpuffer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classStatistik_a41b9bfe1192d9df4652d042bce59d5a2}{Zaehle\+Eintraege}} () const
+\begin{DoxyCompactList}\small\item\em Berechnet die Anzahl an Elementen im Datenpuffer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classStatistik_ad4d1cacb673e8d94e79bac71131fab94}{Zaehle\+Linien}} () const
+\begin{DoxyCompactList}\small\item\em Berechnet die Anzahl an Zeilen im Datenpuffer. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classStatistik_a183c1ffc95ebab5d17f744a49dd31822}{Zaehle\+Worte}} () const
+\begin{DoxyCompactList}\small\item\em Berechnet die Anzahl an Wörtern im Datenpuffer (ohne Zahlen) \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classStatistik_a5c2846e975253aaa81fb35393c18ebf4}{Zaehle\+Zeichen}} () const
+\begin{DoxyCompactList}\small\item\em Berechnet die Anzahl an Zeichen im Datenpuffer. \end{DoxyCompactList}\item 
+\Hypertarget{classStatistik_a4e96bee75c159e117d702774b0998d45}\label{classStatistik_a4e96bee75c159e117d702774b0998d45} 
+uint32\+\_\+t {\bfseries Zaehle\+Variable} (std\+::string variable) const
+\item 
+float \mbox{\hyperlink{classStatistik_ab42c7ca251a0fa02250106f5b31d328d}{Mittelwert}} () const
+\begin{DoxyCompactList}\small\item\em Berechnet den Mittelwert der Daten im Datenpuffer. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classStatistik_af76f1a35c6290a8d1f80fdfa043def4d}{Median}} () const
+\begin{DoxyCompactList}\small\item\em Berechnet den Median der Daten im Datenpuffer. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classStatistik_a55f4e372ed05e951285574fb3df62a86}{Erwartungswert}} () const
+\begin{DoxyCompactList}\small\item\em Berechnet den Erwartungswert der Daten im Datenpuffer. \end{DoxyCompactList}\item 
+\Hypertarget{classStatistik_a733f2b9cc380e2ccdf8334bad708d310}\label{classStatistik_a733f2b9cc380e2ccdf8334bad708d310} 
+float {\bfseries Standardabweichung} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStatistik_a93dde6a9c245462c325791eefa33af53}\label{classStatistik_a93dde6a9c245462c325791eefa33af53} 
+\index{Statistik@{Statistik}!EntferneDaten@{EntferneDaten}}
+\index{EntferneDaten@{EntferneDaten}!Statistik@{Statistik}}
+\doxysubsubsection{\texorpdfstring{EntferneDaten()}{EntferneDaten()}}
+{\footnotesize\ttfamily void Statistik\+::\+Entferne\+Daten (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Entfernt Daten aus dem Datenpuffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Der zu entfernende Datenwert \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStatistik_a55f4e372ed05e951285574fb3df62a86}\label{classStatistik_a55f4e372ed05e951285574fb3df62a86} 
+\index{Statistik@{Statistik}!Erwartungswert@{Erwartungswert}}
+\index{Erwartungswert@{Erwartungswert}!Statistik@{Statistik}}
+\doxysubsubsection{\texorpdfstring{Erwartungswert()}{Erwartungswert()}}
+{\footnotesize\ttfamily float Statistik\+::\+Erwartungswert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Berechnet den Erwartungswert der Daten im Datenpuffer. 
+
+\begin{DoxyReturn}{Returns}
+Erwartungswert der Daten 
+\end{DoxyReturn}
+\Hypertarget{classStatistik_ae9a995e5098a101f05d0d7f7b73ca816}\label{classStatistik_ae9a995e5098a101f05d0d7f7b73ca816} 
+\index{Statistik@{Statistik}!LadeDaten@{LadeDaten}}
+\index{LadeDaten@{LadeDaten}!Statistik@{Statistik}}
+\doxysubsubsection{\texorpdfstring{LadeDaten()}{LadeDaten()}}
+{\footnotesize\ttfamily void Statistik\+::\+Lade\+Daten (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classReadData}{Read\+Data}} \&}]{reader }\end{DoxyParamCaption})}
+
+
+
+Lädt Daten aus einer Datei in den Datenpuffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & Referenz auf ein Read\+Data-\/\+Objekt \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStatistik_af76f1a35c6290a8d1f80fdfa043def4d}\label{classStatistik_af76f1a35c6290a8d1f80fdfa043def4d} 
+\index{Statistik@{Statistik}!Median@{Median}}
+\index{Median@{Median}!Statistik@{Statistik}}
+\doxysubsubsection{\texorpdfstring{Median()}{Median()}}
+{\footnotesize\ttfamily float Statistik\+::\+Median (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Berechnet den Median der Daten im Datenpuffer. 
+
+\begin{DoxyReturn}{Returns}
+Median der Daten 
+\end{DoxyReturn}
+\Hypertarget{classStatistik_ab42c7ca251a0fa02250106f5b31d328d}\label{classStatistik_ab42c7ca251a0fa02250106f5b31d328d} 
+\index{Statistik@{Statistik}!Mittelwert@{Mittelwert}}
+\index{Mittelwert@{Mittelwert}!Statistik@{Statistik}}
+\doxysubsubsection{\texorpdfstring{Mittelwert()}{Mittelwert()}}
+{\footnotesize\ttfamily float Statistik\+::\+Mittelwert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Berechnet den Mittelwert der Daten im Datenpuffer. 
+
+Mit Sperrung vom Mutex \begin{DoxyReturn}{Returns}
+Mittelwert der Daten 
+\end{DoxyReturn}
+\Hypertarget{classStatistik_a41b9bfe1192d9df4652d042bce59d5a2}\label{classStatistik_a41b9bfe1192d9df4652d042bce59d5a2} 
+\index{Statistik@{Statistik}!ZaehleEintraege@{ZaehleEintraege}}
+\index{ZaehleEintraege@{ZaehleEintraege}!Statistik@{Statistik}}
+\doxysubsubsection{\texorpdfstring{ZaehleEintraege()}{ZaehleEintraege()}}
+{\footnotesize\ttfamily uint32\+\_\+t Statistik\+::\+Zaehle\+Eintraege (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Berechnet die Anzahl an Elementen im Datenpuffer. 
+
+\begin{DoxyReturn}{Returns}
+Anzahl der Elemente im Datenpuffer 
+\end{DoxyReturn}
+\Hypertarget{classStatistik_ad4d1cacb673e8d94e79bac71131fab94}\label{classStatistik_ad4d1cacb673e8d94e79bac71131fab94} 
+\index{Statistik@{Statistik}!ZaehleLinien@{ZaehleLinien}}
+\index{ZaehleLinien@{ZaehleLinien}!Statistik@{Statistik}}
+\doxysubsubsection{\texorpdfstring{ZaehleLinien()}{ZaehleLinien()}}
+{\footnotesize\ttfamily uint32\+\_\+t Statistik\+::\+Zaehle\+Linien (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Berechnet die Anzahl an Zeilen im Datenpuffer. 
+
+\begin{DoxyReturn}{Returns}
+Anzahl der Zeilen im Datenpuffer 
+\end{DoxyReturn}
+\Hypertarget{classStatistik_a183c1ffc95ebab5d17f744a49dd31822}\label{classStatistik_a183c1ffc95ebab5d17f744a49dd31822} 
+\index{Statistik@{Statistik}!ZaehleWorte@{ZaehleWorte}}
+\index{ZaehleWorte@{ZaehleWorte}!Statistik@{Statistik}}
+\doxysubsubsection{\texorpdfstring{ZaehleWorte()}{ZaehleWorte()}}
+{\footnotesize\ttfamily uint32\+\_\+t Statistik\+::\+Zaehle\+Worte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Berechnet die Anzahl an Wörtern im Datenpuffer (ohne Zahlen) 
+
+\begin{DoxyReturn}{Returns}
+Anzahl der Wörter im Datenpuffer 
+\end{DoxyReturn}
+\Hypertarget{classStatistik_a5c2846e975253aaa81fb35393c18ebf4}\label{classStatistik_a5c2846e975253aaa81fb35393c18ebf4} 
+\index{Statistik@{Statistik}!ZaehleZeichen@{ZaehleZeichen}}
+\index{ZaehleZeichen@{ZaehleZeichen}!Statistik@{Statistik}}
+\doxysubsubsection{\texorpdfstring{ZaehleZeichen()}{ZaehleZeichen()}}
+{\footnotesize\ttfamily uint32\+\_\+t Statistik\+::\+Zaehle\+Zeichen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Berechnet die Anzahl an Zeichen im Datenpuffer. 
+
+\begin{DoxyReturn}{Returns}
+Anzahl der Zeichen im Datenpuffer 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/utils/statistik.\+hpp\item 
+src/statistik.\+cpp\end{DoxyCompactItemize}

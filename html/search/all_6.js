@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['ladedaten_0',['LadeDaten',['../classStatistik.html#ae9a995e5098a101f05d0d7f7b73ca816',1,'Statistik']]],
-  ['leveltostring_1',['LevelToString',['../classLogging.html#aebac4fe66f7eab96e5559b485bb0642a',1,'Logging']]],
-  ['log_2',['Log',['../classLogging.html#ac3b0a6169117f682329c0b338d3ca637',1,'Logging']]],
-  ['logfile_5f_3',['logFile_',['../classLogging.html#a08733b6f7e5f5a4ba7548e4b5fb90b95',1,'Logging']]],
-  ['logging_4',['logging',['../classLogging.html',1,'Logging'],['../classLogging.html#a81caf1fc6d473860f1a9eaa18e266b32',1,'Logging::Logging()']]],
-  ['logging_2ecpp_5',['logging.cpp',['../logging_8cpp.html',1,'']]],
-  ['logging_2ehpp_6',['logging.hpp',['../logging_8hpp.html',1,'']]],
-  ['loglevel_7',['LogLevel',['../logging_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9',1,'logging.hpp']]],
-  ['logmutex_5f_8',['logMutex_',['../classLogging.html#a49d182f543903f4f5750f81aa7ab94c9',1,'Logging']]]
+  ['readauto_0',['ReadAuto',['../classReadData.html#a46a56ea1552e197c585d93cdbabbaacd',1,'ReadData']]],
+  ['readcsv_1',['ReadCSV',['../classReadData.html#ae0b007a067ce6a9e69dd8aab811ee292',1,'ReadData']]],
+  ['readdata_2',['ReadData',['../classReadData.html',1,'']]],
+  ['readfile_3',['ReadFile',['../classReadData.html#a58838a1ecef4ecbafdaaf958cdf8199a',1,'ReadData']]],
+  ['readhtml_4',['ReadHTML',['../classReadData.html#a14f5ba8c031af3c0b95b043b176cb104',1,'ReadData']]],
+  ['readjson_5',['ReadJSON',['../classReadData.html#a434246bf7bf714847f33c9bbbe1221ec',1,'ReadData']]],
+  ['readpdf_6',['ReadPDF',['../classReadData.html#ab0ae55bfba118ebec36d253854c7e485',1,'ReadData']]],
+  ['readtxt_7',['ReadTxt',['../classReadData.html#a21312929e36adcb08d9b8d06a9130b26',1,'ReadData']]],
+  ['readxml_8',['ReadXML',['../classReadData.html#a0de49d1666d10bc17ccc11f00767abec',1,'ReadData']]]
 ];
