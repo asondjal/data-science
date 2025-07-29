@@ -11,6 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Formatierung für C++Dateien prüfen
+        run: clang-format --dry-run --Werror $(find ./src ./cpp_tests ./inc -regex '.*\.\(cpp\|hpp\)$')
+
+      - name: Dokumentation generieren
+        run: |
+          sudo apt-get install doxygen graphviz -y
+          doxygen Doxyfile
+
       - name: Repository auschecken
         uses: actions/checkout@v3
         with:
@@ -26,29 +35,37 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y cmake g++ ccache libpoppler-cpp-dev
           sudo apt-get install -y libtinyxml2-dev
-          pip install --upgrade pip
-          pip install pytest pybind11
-
-
+    
       - name: CMake konfigurieren
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 
       - name: C++-Modul kompilieren
         run: cmake --build build --config Release
 
+      - name: Python-Testabdeckung messen
+        run: |
+          pip install pytest-cov
+          pytest --cov=python --cov-report=xml
+
       - name: Python-Tests einzeln ausführen
         env:
           PYTHONPATH: ${{ github.workspace }}/build
         run: |
+          pip install --upgrade pip
+          pip install pytest pybind11
+
           for file in python_tests/test_*.py; do
-            pytest "$file"
+            pytest "$file" --ignore=pybind11
           done
 
+      - name: Coverage für C++ erzeugen
+        run: |
+          sudo apt-get install lcov -y
+          lcov --capture --directory . --output-file coverage.info
+          genhtml coverage.info --output-directory coverage_report
+ 
       - name: C++-Tests ausführen
         run: |
           chmod +x ./build/cpp_tests
           ./build/cpp_tests
-
-      - name: Formatierung für C++Dateien prüfen
-        run: clang-format --dry-run --Werror $(find ./src ./cpp_tests ./inc -regex '.*\.\(cpp\|hpp\)$')
 
