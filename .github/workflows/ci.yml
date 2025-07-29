@@ -51,6 +51,7 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}/build
         run: |
           pip install pytest-cov
+          pytest --ignore=pybind11
           pytest --cov=python --cov-report=xml
 
       - name: Python-Tests einzeln ausführen
