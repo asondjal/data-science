@@ -17,7 +17,11 @@ jobs:
 
       - name: Dokumentation generieren
         run: |
+          sudo apt-get update
           sudo apt-get install doxygen graphviz -y
+          doxygen -g  # Erstellt einen Basis-Doxyfile
+          sed -i 's|^INPUT *=.*|INPUT = ./src ./inc|' Doxyfile
+          sed -i 's|^RECURSIVE *=.*|RECURSIVE = YES|' Doxyfile
           doxygen Doxyfile
 
       - name: Repository auschecken
