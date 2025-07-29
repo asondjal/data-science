@@ -28,7 +28,7 @@ class Statistik {
   float Standardabweichung() const;
 
  private:
-  std::vector<std::string> datenBuffer_;
+  mutable std::vector<std::string> datenBuffer_;
   mutable std::mutex datenMutex_;
 
   float Varianz() const;

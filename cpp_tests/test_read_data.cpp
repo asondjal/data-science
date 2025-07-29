@@ -48,9 +48,15 @@ void TestReadData() {
     expected_lines.push_back(line);
   }
   assert(data_set == expected_lines);
-  // inventur.ObserveCache();
-  // std::vector<std::string> new_data_set = inventur.DisplayData();
-  // assert(data_set == std::vector<std::string>{});
+  inventur.ObserveCache();
+
+  try {
+    std::vector<std::string> new_data_set = inventur.DisplayData();
+    // Falls keine Exception geworfen wurde, ist das ein Fehler
+    assert(false && "Fehlermeldung: Kein Cache ist vorhanden.");
+  } catch (const std::runtime_error& e) {
+    std::cout << "Erwartete Exception abgefangen: " << e.what() << std::endl;
+  }
 
   ReadData kunden{"./data/supermarkt_0/kunden.txt"};
   std::string kundenData = kunden.ReadTxt();
@@ -153,12 +159,13 @@ void TestReadData() {
   assert(autoData == automated_content);
 
   try {
-    ReadData htmlReader("beispiel.html");
-    std::string htmlContent = htmlReader.ReadHTML();
-    std::cout << "HTML-Inhalt:\n" << htmlContent << std::endl;
+    ReadData htmlReader("./data/example.html");
+    htmlReader.ReadHTML();
+    htmlReader.DisplayData();
 
-    ReadData xmlReader("beispiel.xml");
+    ReadData xmlReader("./data/example.xml");
     xmlReader.ReadXML();
+    xmlReader.DisplayData();
   } catch (const std::exception& e) {
     std::cerr << "Fehler: " << e.what() << std::endl;
   }

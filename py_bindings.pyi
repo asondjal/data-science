@@ -32,8 +32,11 @@ class ReadData:
     def read_auto(self, reload=False) -> str:
         """Lese Daten aus einer Datei, die automatisch erkannt wird."""
 
-    def display_data(self, print_data=True) -> list:
+    def display_data(self) -> list:
         """Wiedergabe der gespeicherten Daten als Dictionary"""
+
+    def observe_cache(self) -> None:
+        """Verwaltung vom Cache, indem Ressoucen freigegeben werden."""
 
 class Statistik:
     """Klasse zur Berechnung von Statistiken."""

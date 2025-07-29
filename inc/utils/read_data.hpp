@@ -23,7 +23,7 @@ class ReadData {
   std::string ReadAuto(bool reload = false) const;
   std::string ReadHTML() const;
   std::string ReadXML() const;
-  std::vector<std::string> DisplayData(bool print = true) const;
+  std::vector<std::string> DisplayData() const;
   void ObserveCache() const;  // Muss ueberprueft und verbessert werden
 
  private:

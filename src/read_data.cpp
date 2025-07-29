@@ -8,8 +8,9 @@ std::mutex& ReadData::GetMutex() { return mtx_; }
  * @brief Speicherverwaltung vom Cache --> Muss noch getestet werden!!
  */
 void ReadData::ObserveCache() const {
-  is_cached_ = false;
+  std::lock_guard<std::mutex> lock(mtx_);
   cache_.clear();
+  is_cached_ = false;
 }
 
 /**
@@ -29,6 +30,10 @@ std::string ReadData::ReadFile() const {
 
   std::stringstream buffer;
   buffer << file.rdbuf();
+
+  is_cached_ = true;
+  cache_ = buffer.str();
+
   return buffer.str();
 }
 
@@ -81,19 +86,18 @@ std::string ReadData::ReadHTML() const { return ReadFile(); }
  * @brief Liest den Inhalt einer XML-Datei aus und gibt den Inhalt als String zurück
  */
 std::string ReadData::ReadXML() const {
+  std::lock_guard<std::mutex> lock(mtx_);
   tinyxml2::XMLDocument doc;
-  auto result = doc.LoadFile(filePath_.c_str());
-
-  if (result != tinyxml2::XML_SUCCESS) {
+  if (doc.LoadFile(filePath_.c_str()) != tinyxml2::XML_SUCCESS) {
     throw std::runtime_error("Fehler beim Laden der XML-Datei: " + filePath_);
   }
 
-  tinyxml2::XMLElement* root = doc.RootElement();
-  std::stringstream ss;
-  if (root) {
-    ss << "Root-Element: " << root->Name();
-  }
-  return ss.str();
+  tinyxml2::XMLPrinter printer;
+  doc.Print(&printer);
+
+  cache_ = printer.CStr();
+  is_cached_ = true;
+  return cache_;
 }
 
 /**
@@ -135,28 +139,23 @@ std::string ReadData::ReadAuto(bool reload) const {
  * @brief Wiedergabe der im Buffer gespeicherten Informationen
  * @param bool print, `true` per Default, sonst `false`
  */
-std::vector<std::string> ReadData::DisplayData(bool print) const {
-  std::lock_guard<std::mutex> lock(mtx_);  // Schutz vor Race Conditions
+std::vector<std::string> ReadData::DisplayData() const {
+  std::lock_guard<std::mutex> lock(mtx_);
 
-  if (!std::filesystem::exists(filePath_)) {
-    throw std::runtime_error("Nicht existierende Datei: " + filePath_);
-  }
-
-  std::ifstream file(filePath_);
-  if (!file.is_open()) {
-    throw std::runtime_error("Fehler beim Öffnen der Datei: " + filePath_);
+  if (!is_cached_) {
+    throw std::runtime_error("Der Cache ist leer. Bitte laden Sie Daten!");
   }
 
   std::vector<std::string> lines;
+  std::istringstream stream(cache_);
   std::string line;
   int line_number = 1;
 
-  while (std::getline(file, line)) {
+  while (std::getline(stream, line)) {
     lines.push_back(line);
-    if (print) {
-      std::cout << "[Zeile " << line_number << ": \"" << line << "\"]" << std::endl;
-    }
+    std::cout << "[Zeile " << line_number << ": \"" << line << "\"]" << std::endl;
     ++line_number;
   }
+
   return lines;
 }

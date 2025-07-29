@@ -16,7 +16,8 @@ PYBIND11_MODULE(py_bindings, py_module) {
         .def("read_auto", &ReadData::ReadAuto)
         .def("read_html", &ReadData::ReadHTML)
         .def("read_xml", &ReadData::ReadXML)
-        .def("display_data", &ReadData::DisplayData);
+        .def("display_data", &ReadData::DisplayData)
+        .def("observe_cache", &ReadData::ObserveCache);
 
     py::class_<Statistik>(py_module, "Statistik")
         .def(py::init<>())
