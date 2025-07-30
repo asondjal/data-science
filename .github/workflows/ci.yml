@@ -46,6 +46,11 @@ jobs:
       - name: C++-Modul kompilieren
         run: cmake --build build --config Release
 
+      - name: C++-Tests ausführen
+        run: |
+          chmod +x ./build/cpp_tests
+          ./build/cpp_tests
+
       - name: Coverage für C++ erzeugen
         run: |
           sudo apt-get install lcov -y
@@ -57,19 +62,6 @@ jobs:
           lcov --extract temp.info '*/src/*' '*/cpp_tests/*' \
           --output-file coverage.info
  
-      - name: C++-Tests ausführen
-        run: |
-          chmod +x ./build/cpp_tests
-          ./build/cpp_tests
-
-      - name: Python-Testabdeckung messen
-        env:
-          PYTHONPATH: ${{ github.workspace }}/build
-        run: |
-          pip install pytest-cov
-
-          pytest python_tests --cov=python_tests --cov-report=xml --ignore=pybind11
-
       - name: Python-Tests einzeln ausführen
         env:
           PYTHONPATH: ${{ github.workspace }}/build
@@ -80,5 +72,15 @@ jobs:
           for file in python_tests/test_*.py; do
             pytest "$file" --ignore=pybind11
           done
+          
+      - name: Python-Testabdeckung messen
+        env:
+          PYTHONPATH: ${{ github.workspace }}/build
+        run: |
+          pip install pytest-cov
+
+          pytest python_tests --cov=python_tests --cov-report=xml --ignore=pybind11
+
+
 
 
