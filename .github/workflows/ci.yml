@@ -49,8 +49,13 @@ jobs:
       - name: Coverage für C++ erzeugen
         run: |
           sudo apt-get install lcov -y
-          lcov --capture --directory . --output-file coverage.info
-          genhtml coverage.info --output-directory coverage_report
+          lcov --capture \
+          --directory build/CMakeFiles/cpp_tests.dir \
+          --output-file temp.info \
+          --ignore-errors unused,empty
+
+          lcov --extract temp.info '*/src/*' '*/cpp_tests/*' \
+          --output-file coverage.info
  
       - name: C++-Tests ausführen
         run: |

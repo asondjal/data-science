@@ -146,3 +146,43 @@
 [30.07.2025 15:03:26] [DEBUG] Reading configuration...
 [30.07.2025 15:03:26] [WARNING] File not found!
 [30.07.2025 15:03:26] [ERROR] Critical error!
+[30.07.2025 15:10:04] [INFO] System initialized.
+[30.07.2025 15:10:04] [DEBUG] Reading configuration...
+[30.07.2025 15:10:04] [WARNING] File not found!
+[30.07.2025 15:10:04] [ERROR] Critical error!
+[30.07.2025 15:12:48] [INFO] System initialized.
+[30.07.2025 15:12:48] [DEBUG] Reading configuration...
+[30.07.2025 15:12:48] [WARNING] File not found!
+[30.07.2025 15:12:48] [ERROR] Critical error!
+[30.07.2025 16:46:20] [INFO] System initialized.
+[30.07.2025 16:46:20] [DEBUG] Reading configuration...
+[30.07.2025 16:46:20] [WARNING] File not found!
+[30.07.2025 16:46:20] [ERROR] Critical error!
+[30.07.2025 16:48:43] [INFO] System initialized.
+[30.07.2025 16:48:43] [DEBUG] Reading configuration...
+[30.07.2025 16:48:43] [WARNING] File not found!
+[30.07.2025 16:48:43] [ERROR] Critical error!
+[30.07.2025 16:57:57] [INFO] System initialized.
+[30.07.2025 16:57:57] [DEBUG] Reading configuration...
+[30.07.2025 16:57:57] [WARNING] File not found!
+[30.07.2025 16:57:57] [ERROR] Critical error!
+[30.07.2025 20:36:43] [INFO] System initialized.
+[30.07.2025 20:36:43] [DEBUG] Reading configuration...
+[30.07.2025 20:36:43] [WARNING] File not found!
+[30.07.2025 20:36:43] [ERROR] Critical error!
+[30.07.2025 20:42:33] [INFO] System initialized.
+[30.07.2025 20:42:33] [DEBUG] Reading configuration...
+[30.07.2025 20:42:33] [WARNING] File not found!
+[30.07.2025 20:42:33] [ERROR] Critical error!
+[30.07.2025 20:51:24] [INFO] System initialized.
+[30.07.2025 20:51:24] [DEBUG] Reading configuration...
+[30.07.2025 20:51:24] [WARNING] File not found!
+[30.07.2025 20:51:24] [ERROR] Critical error!
+[30.07.2025 20:54:35] [INFO] System initialized.
+[30.07.2025 20:54:35] [DEBUG] Reading configuration...
+[30.07.2025 20:54:35] [WARNING] File not found!
+[30.07.2025 20:54:35] [ERROR] Critical error!
+[30.07.2025 20:56:54] [INFO] System initialized.
+[30.07.2025 20:56:54] [DEBUG] Reading configuration...
+[30.07.2025 20:56:54] [WARNING] File not found!
+[30.07.2025 20:56:54] [ERROR] Critical error!
