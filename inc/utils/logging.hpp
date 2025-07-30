@@ -1,6 +1,7 @@
 #ifndef INC_UTILS_LOGGING_HPP_
 #define INC_UTILS_LOGGING_HPP_
 
+#include <cassert>
 #include <chrono>
 #include <fstream>
 #include <iomanip>
@@ -8,7 +9,6 @@
 #include <mutex>
 #include <sstream>
 #include <string>
-#include <cassert>
 
 enum class LogLevel { DEBUG, INFO, WARNING, ERROR };
 

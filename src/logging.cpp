@@ -41,7 +41,7 @@ void Logging::EnableConsoleOutput(bool enable) {
 /**
  * @brief Funktion zur Überprüfung von der Konsolenausgabe
  */
-bool Logging::TestConsoleStatus(){
+bool Logging::TestConsoleStatus() {
   EnableConsoleOutput(true);
   bool statusTrue = consoleOutput_ == true;
 
