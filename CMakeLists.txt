@@ -11,14 +11,14 @@ set(CMAKE_CXX_COMPILER_LAUNCHER ccache)
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O2")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0 -Wall -Wextra -pedantic")
 
+# Gemeinsame Coverage-Flags
+set(COVERAGE_LINK_FLAGS "--coverage")
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     message(STATUS "Debug-Modus: Coverage aktiviert")
     add_compile_options(--coverage -g -O0)
     link_libraries(gcov)
 endif()
-
-
 
 
 # Executable fuers Hauptprojekt
@@ -45,6 +45,10 @@ add_executable(cpp_tests
     cpp_tests/test_statistik.cpp
     cpp_tests/test_logging.cpp
 )
+
+# Coverage explizit für cpp_tests
+target_compile_options(cpp_tests PRIVATE ${COVERAGE_COMPILE_FLAGS})
+target_link_libraries(cpp_tests PRIVATE gcov)
 
 target_include_directories(cpp_tests PRIVATE ${PROJECT_SOURCE_DIR}/inc)
 

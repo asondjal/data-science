@@ -46,6 +46,17 @@ jobs:
       - name: C++-Modul kompilieren
         run: cmake --build build --config Release
 
+      - name: Coverage für C++ erzeugen
+        run: |
+          sudo apt-get install lcov -y
+          lcov --capture --directory . --output-file coverage.info
+          genhtml coverage.info --output-directory coverage_report
+ 
+      - name: C++-Tests ausführen
+        run: |
+          chmod +x ./build/cpp_tests
+          ./build/cpp_tests
+
       - name: Python-Testabdeckung messen
         env:
           PYTHONPATH: ${{ github.workspace }}/build
@@ -65,14 +76,4 @@ jobs:
             pytest "$file" --ignore=pybind11
           done
 
-      - name: Coverage für C++ erzeugen
-        run: |
-          sudo apt-get install lcov -y
-          lcov --capture --directory . --output-file coverage.info
-          genhtml coverage.info --output-directory coverage_report
- 
-      - name: C++-Tests ausführen
-        run: |
-          chmod +x ./build/cpp_tests
-          ./build/cpp_tests
 
