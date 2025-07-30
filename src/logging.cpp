@@ -39,6 +39,19 @@ void Logging::EnableConsoleOutput(bool enable) {
 }
 
 /**
+ * @brief Funktion zur Überprüfung von der Konsolenausgabe
+ */
+bool Logging::TestConsoleStatus(){
+  EnableConsoleOutput(true);
+  bool statusTrue = consoleOutput_ == true;
+
+  EnableConsoleOutput(false);
+  bool statusFalse = consoleOutput_ == false;
+
+  return statusTrue && statusFalse;
+}
+
+/**
  * @brief Wiedergabe der Zeit
  * @return Zeitangabe im Format `TT:MM:YY H:M:S`
  */
@@ -48,6 +61,18 @@ std::string Logging::GetTimestamp() const {
   std::ostringstream ss;
   ss << std::put_time(std::localtime(&itt), "%d.%m.%Y %H:%M:%S");
   return ss.str();
+}
+
+void Logging::TestGetTimestamp() {
+  Logging logger("logfile.txt", LogLevel::DEBUG);
+  std::string timestamp = logger.GetTimestamp();
+
+  // Check basic format: DD.MM.YYYY HH:MM:SS (length should be 19)
+  assert(timestamp.length() == 19);
+  assert(timestamp[2] == '.' && timestamp[5] == '.' && timestamp[10] == ' ');
+  assert(timestamp[13] == ':' && timestamp[16] == ':');
+
+  std::cout << "TestGetTimestamp erfolgreich!" << std::endl;
 }
 
 /**

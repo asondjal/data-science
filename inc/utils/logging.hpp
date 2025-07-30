@@ -8,6 +8,7 @@
 #include <mutex>
 #include <sstream>
 #include <string>
+#include <cassert>
 
 enum class LogLevel { DEBUG, INFO, WARNING, ERROR };
 
@@ -29,6 +30,8 @@ class Logging {
   void Log(const std::string& message, LogLevel level = LogLevel::INFO);
   void SetLevel(LogLevel level);
   void EnableConsoleOutput(bool enable);
+  bool TestConsoleStatus();
+  void TestGetTimestamp();
   std::string GetLevel();
 };
 
