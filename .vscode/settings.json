@@ -1,4 +1,4 @@
-{   
+{
   "python.analysis.extraPaths": ["./build"],
   "python.analysis.diagnosticSeverityOverrides": {
     "reportMissingImports": "none",
@@ -93,4 +93,5 @@
     },
     "C_Cpp.errorSquiggles": "disabled",
     "C_Cpp.default.compilerPath": "/usr/bin/gcc"
+
 }

@@ -10,9 +10,10 @@ set(CMAKE_CXX_COMPILER_LAUNCHER ccache)
 
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O2")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0 -Wall -Wextra -pedantic")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 --coverage")
 
 # Executable fuers Hauptprojekt
-add_executable(data-science 
+add_executable(data-science
     src/main.cpp
     src/read_data.cpp
     src/statistik.cpp
@@ -29,7 +30,7 @@ add_executable(cpp_tests
     src/read_data.cpp
     src/statistik.cpp
     src/logging.cpp
-    
+
     cpp_tests/main.cpp
     cpp_tests/test_read_data.cpp
     cpp_tests/test_statistik.cpp
@@ -42,7 +43,7 @@ target_link_libraries(cpp_tests PRIVATE gcov)
 
 target_include_directories(cpp_tests PRIVATE ${PROJECT_SOURCE_DIR}/inc)
 
-target_link_libraries(cpp_tests PRIVATE 
+target_link_libraries(cpp_tests PRIVATE
     poppler-cpp
     tinyxml2
 )
@@ -60,13 +61,13 @@ include_directories(${CMAKE_SOURCE_DIR}/pybind11/include)
 # Executable fuer die Integration von C++ in Python
 pybind11_add_module(py_bindings
     bindings/python_bindings.cpp
-    
+
     src/read_data.cpp
     src/statistik.cpp
     src/logging.cpp
 )
 
-target_link_libraries(py_bindings PRIVATE 
+target_link_libraries(py_bindings PRIVATE
     poppler-cpp
     tinyxml2
 )
