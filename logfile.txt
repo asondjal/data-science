@@ -186,3 +186,7 @@
 [30.07.2025 20:56:54] [DEBUG] Reading configuration...
 [30.07.2025 20:56:54] [WARNING] File not found!
 [30.07.2025 20:56:54] [ERROR] Critical error!
+[02.08.2025 11:37:08] [INFO] System initialized.
+[02.08.2025 11:37:08] [DEBUG] Reading configuration...
+[02.08.2025 11:37:08] [WARNING] File not found!
+[02.08.2025 11:37:08] [ERROR] Critical error!
