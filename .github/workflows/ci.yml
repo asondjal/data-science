@@ -15,15 +15,6 @@ jobs:
       - name: Formatierung für C++Dateien prüfen
         run: clang-format --dry-run --Werror $(find ./src ./cpp_tests ./inc -regex '.*\.\(cpp\|hpp\)$')
 
-      - name: Dokumentation generieren
-        run: |
-          sudo apt-get update
-          sudo apt-get install doxygen graphviz -y
-          doxygen -g  # Erstellt einen Basis-Doxyfile
-          sed -i 's|^INPUT *=.*|INPUT = ./src ./inc|' Doxyfile
-          sed -i 's|^RECURSIVE *=.*|RECURSIVE = YES|' Doxyfile
-          doxygen Doxyfile
-
       - name: Repository auschecken
         uses: actions/checkout@v3
         with:
@@ -50,17 +41,6 @@ jobs:
         run: |
           chmod +x ./build/cpp_tests
           ./build/cpp_tests
-
-      - name: Coverage für C++ erzeugen
-        run: |
-          sudo apt-get install lcov -y
-          lcov --capture \
-          --directory build/CMakeFiles/cpp_tests.dir \
-          --output-file temp.info \
-          --ignore-errors unused,empty
-
-          lcov --extract temp.info '*/src/*' '*/cpp_tests/*' \
-          --output-file coverage.info
  
       - name: Python-Tests einzeln ausführen
         env:
@@ -72,15 +52,3 @@ jobs:
           for file in python_tests/test_*.py; do
             pytest "$file" --ignore=pybind11
           done
-          
-      - name: Python-Testabdeckung messen
-        env:
-          PYTHONPATH: ${{ github.workspace }}/build
-        run: |
-          pip install pytest-cov
-
-          pytest python_tests --cov=python_tests --cov-report=xml --ignore=pybind11
-
-
-
-
