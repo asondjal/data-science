@@ -2,6 +2,7 @@
 
 from py_bindings import ReadData
 
+
 def test_read_data():
     """Funktion zum Testen von ReadData"""
     read_data = ReadData("./data/supermarkt_0/produkte.txt")
@@ -85,7 +86,7 @@ def test_read_data():
         print(f"Ausnahme erkannt: {e}")
 
     html_reader = ReadData("./data/example.html")
-    html_reader.read_txt()
+    html_reader.read_html()
     html_data_set = html_reader.display_data()
     print(html_data_set[0:2])
     html_reader.observe_cache()
@@ -97,7 +98,7 @@ def test_read_data():
         print(f"Ausnahme erkannt: {e}")
 
     xml_reader = ReadData("./data/example.xml")
-    xml_reader.read_txt()
+    xml_reader.read_xml()
     xml_data_set = xml_reader.display_data()
     print(xml_data_set[0:2])
     xml_reader.observe_cache()
