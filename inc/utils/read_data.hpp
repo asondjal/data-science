@@ -15,6 +15,7 @@
 class ReadData {
  public:
   explicit ReadData(const std::string& path);
+  std::string GetFileType(const std::string& location) const;
   std::string ReadFile() const;
   std::string ReadTxt() const;
   std::string ReadCSV() const;

@@ -4,13 +4,9 @@ ReadData::ReadData(const std::string& path) : filePath_{path} {}
 
 std::mutex& ReadData::GetMutex() { return mtx_; }
 
-/**
- * @brief Speicherverwaltung vom Cache --> Muss noch getestet werden!!
- */
-void ReadData::ObserveCache() const {
-  std::lock_guard<std::mutex> lock(mtx_);
-  cache_.clear();
-  is_cached_ = false;
+std::string ReadData::GetFileType(const std::string& location) const {
+  std::string fileType = std::filesystem::path(location).extension().string();
+  return fileType;
 }
 
 /**
@@ -41,19 +37,37 @@ std::string ReadData::ReadFile() const {
  * @brief Liest den Inhalt einer Textdatei aus und gibt ihn als String zurück
  * @return Inhalt der Text-Datei als String
  */
-std::string ReadData::ReadTxt() const { return ReadFile(); }
+std::string ReadData::ReadTxt() const {
+  if (GetFileType(filePath_) != ".txt") {
+    throw std::runtime_error("Dateiformat anstatt .txt: " +
+                             std::filesystem::path(filePath_).extension().string());
+  }
+  return ReadFile();
+}
 
 /**
  * @brief Liest den Inhalt einer CSV-Datei aus und gibt ihn als String zurück
  * @return Inhalt der CSV-Datei als String
  */
-std::string ReadData::ReadCSV() const { return ReadFile(); }
+std::string ReadData::ReadCSV() const {
+  if (GetFileType(filePath_) != ".csv") {
+    throw std::runtime_error("Dateiformat anstatt .csv: " +
+                             std::filesystem::path(filePath_).extension().string());
+  }
+  return ReadFile();
+}
 
 /**
  * @brief Liest den Inhalt einer JSON-Datei und gibt ihn als String zurück
  * @return Inhalt der JSON-Datei als String
  */
-std::string ReadData::ReadJSON() const { return ReadFile(); }
+std::string ReadData::ReadJSON() const {
+  if (GetFileType(filePath_) != ".json") {
+    throw std::runtime_error("Dateiformat anstatt .json: " +
+                             std::filesystem::path(filePath_).extension().string());
+  }
+  return ReadFile();
+}
 
 /**
  * @brief Liest den Inhalt einer PDF-Datei und gibt ihn als String zurück
@@ -62,7 +76,14 @@ std::string ReadData::ReadJSON() const { return ReadFile(); }
 std::string ReadData::ReadPDF() const {
   std::string content;
   std::lock_guard<std::mutex> lock(mtx_);
+
+  if (GetFileType(filePath_) != ".pdf") {
+    throw std::runtime_error("Dateiformat anstatt .pdf: " +
+                             std::filesystem::path(filePath_).extension().string());
+  }
+
   poppler::document* doc = poppler::document::load_from_file(filePath_);
+
   if (!doc) {
     throw std::runtime_error("PDF-Datei kann nicht geöffnet werden: " + filePath_);
   }
@@ -80,7 +101,13 @@ std::string ReadData::ReadPDF() const {
 /**
  * @brief Liest den Inhalt einer HTML-Datei aus und gibt ihn als String zurück
  */
-std::string ReadData::ReadHTML() const { return ReadFile(); }
+std::string ReadData::ReadHTML() const {
+  if (GetFileType(filePath_) != ".html") {
+    throw std::runtime_error("Dateiformat anstatt .html: " +
+                             std::filesystem::path(filePath_).extension().string());
+  }
+  return ReadFile();
+}
 
 /**
  * @brief Liest den Inhalt einer XML-Datei aus und gibt den Inhalt als String zurück
@@ -88,6 +115,12 @@ std::string ReadData::ReadHTML() const { return ReadFile(); }
 std::string ReadData::ReadXML() const {
   std::lock_guard<std::mutex> lock(mtx_);
   tinyxml2::XMLDocument doc;
+
+  if (GetFileType(filePath_) != ".xml") {
+    throw std::runtime_error("Dateiformat anstatt .xml: " +
+                             std::filesystem::path(filePath_).extension().string());
+  }
+
   if (doc.LoadFile(filePath_.c_str()) != tinyxml2::XML_SUCCESS) {
     throw std::runtime_error("Fehler beim Laden der XML-Datei: " + filePath_);
   }
@@ -158,4 +191,13 @@ std::vector<std::string> ReadData::DisplayData() const {
   }
 
   return lines;
+}
+
+/**
+ * @brief Speicherverwaltung vom Cache --> Muss noch getestet werden!!
+ */
+void ReadData::ObserveCache() const {
+  std::lock_guard<std::mutex> lock(mtx_);
+  cache_.clear();
+  is_cached_ = false;
 }

@@ -1,4 +1,4 @@
-name: Supermarkt CI
+name: Data-Science CI
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y cmake g++ ccache libpoppler-cpp-dev
           sudo apt-get install -y libtinyxml2-dev
-    
+
       - name: CMake konfigurieren
         run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 
@@ -41,7 +41,7 @@ jobs:
         run: |
           chmod +x ./build/cpp_tests
           ./build/cpp_tests
- 
+
       - name: Python-Tests einzeln ausführen
         env:
           PYTHONPATH: ${{ github.workspace }}/build
