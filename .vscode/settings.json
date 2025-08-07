@@ -6,8 +6,6 @@
   },
   "python.analysis.typeCheckingMode": "off",
   "python.envFile": "${workspaceFolder}/.env",
-  "python.analysis.ignore": ["./GUI/gui.py", "./tests/test_supermarkt.py"],
-
     "cmake.configureOnOpen": false,
     "files.associations": {
         "iomanip": "cpp",
@@ -93,5 +91,4 @@
     },
     "C_Cpp.errorSquiggles": "disabled",
     "C_Cpp.default.compilerPath": "/usr/bin/gcc"
-
 }

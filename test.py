@@ -1,12 +1,9 @@
 """Einfaches Python-File zur Datenanalyse"""
 
-from py_bindings import ReadData
-from py_bindings import Statistik
-from py_bindings import Logging, LogLevel
-
+from py_bindings import Logging, LogLevel, ReadData, Statistik
 
 basic = ReadData("logfile.txt")
-print(basic.read_auto())
+print(basic.read_auto(False))
 
 statistics = Statistik()
 statistics.lade_daten(basic)
