@@ -2,9 +2,9 @@ name: Data-Science CI
 
 on:
   push:
-    branches: [main]
+    branches: [experiment]
   pull_request:
-    branches: [main]
+    branches: [experiment]
 
 jobs:
   build-and-test:
