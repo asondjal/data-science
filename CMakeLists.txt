@@ -12,12 +12,18 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O2")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0 -Wall -Wextra -pedantic")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 --coverage")
 
+# Entfernen überflüssiger Reste der Coverage
+add_custom_target(clean_coverage
+    COMMAND find ${CMAKE_BINARY_DIR} -name "*.gcda" -delete
+)
+
 # Executable fuers Hauptprojekt
 add_executable(data-science
     src/main.cpp
     src/read_data.cpp
     src/statistik.cpp
     src/logging.cpp
+    src/arithmetic.cpp
 )
 
 target_include_directories(data-science PRIVATE ${PROJECT_SOURCE_DIR}/inc)
@@ -30,11 +36,13 @@ add_executable(cpp_tests
     src/read_data.cpp
     src/statistik.cpp
     src/logging.cpp
+    src/arithmetic.cpp
 
     cpp_tests/main.cpp
     cpp_tests/test_read_data.cpp
     cpp_tests/test_statistik.cpp
     cpp_tests/test_logging.cpp
+    cpp_tests/test_arithmetic.cpp
 )
 
 # Coverage explizit für cpp_tests
