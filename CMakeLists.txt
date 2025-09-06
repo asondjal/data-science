@@ -67,7 +67,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${CMAKE_SOURCE_DIR}/pybind11/include)
 
 # Executable fuer die Integration von C++ in Python
-pybind11_add_module(py_bindings
+pybind11_add_module(intersection
     bindings/python_bindings.cpp
 
     src/read_data.cpp
@@ -75,8 +75,8 @@ pybind11_add_module(py_bindings
     src/logging.cpp
 )
 
-target_link_libraries(py_bindings PRIVATE
+target_link_libraries(intersection PRIVATE
     poppler-cpp
     tinyxml2
 )
-target_include_directories(py_bindings PRIVATE ${PROJECT_SOURCE_DIR}/inc)
+target_include_directories(intersection PRIVATE ${PROJECT_SOURCE_DIR}/inc)
