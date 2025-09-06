@@ -3,7 +3,7 @@
 from py_bindings import Logging, LogLevel, ReadData, Statistik
 
 basic = ReadData("logfile.txt")
-print(basic.read_auto(False))
+print(basic.read_auto())
 
 statistics = Statistik()
 statistics.lade_daten(basic)
