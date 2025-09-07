@@ -1,6 +1,7 @@
 """Python-file for testing class Statistik"""
 
-from py_bindings import ReadData, Statistik
+from intersection import ReadData, Statistik
+
 
 def test_statistik():
     """Funktion zum Testen von Statistik"""
@@ -24,7 +25,8 @@ def test_statistik():
     assert 7.508571147 - statistik.mittelwert() < 0.0001
     assert statistik.zeichenanzahl() == 1202
     assert 601.00001321 - statistik.median() < 0.0001
-    assert 7.836666584014893- statistik.erwartungswert() < 0.0001
+    assert 7.836666584014893 - statistik.erwartungswert() < 0.0001
     assert 8.048698425292969 - statistik.standardabweichung() < 0.0001
+
 
 test_statistik()
