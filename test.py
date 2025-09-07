@@ -1,6 +1,6 @@
 """Einfaches Python-File zur Datenanalyse"""
 
-from py_bindings import Logging, LogLevel, ReadData, Statistik
+from intersection import Logging, LogLevel, ReadData, Statistik
 
 basic = ReadData("logfile.txt")
 print(basic.read_auto())

@@ -1,6 +1,6 @@
 """Python-file for testing class ReadData"""
 
-from py_bindings import ReadData
+from intersection import ReadData
 
 
 def test_read_data():
