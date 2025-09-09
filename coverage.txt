@@ -1,0 +1,45 @@
+Coverage report: 92%
+
+   [ ] Show/hide keyboard shortcuts
+
+   Shortcuts on this page
+
+   n s m x c   change column sorting
+
+   [ ]   prev/next file
+
+   ?   show/hide this help
+   ____________________
+
+   [1]coverage.py v7.4.4, created at 2025-09-09 22:15 +0200
+
+                Module               statements missing excluded coverage
+   [2]conftest.py                    11         8       0        27%
+   [3]python_tests/__init__.py       0          0       0        100%
+   [4]python_tests/test_logging.py   16         0       0        100%
+   [5]python_tests/test_read_data.py 89         0       0        100%
+   [6]python_tests/test_statistik.py 24         0       0        100%
+   [7]setup.py                       4          4       0        0%
+   Total                             144        12      0        92%
+
+   No items found using the specified filter.
+
+   [8]coverage.py v7.4.4, created at 2025-09-09 22:15 +0200
+
+   [9](BUTTON) (BUTTON) (BUTTON)
+
+References
+
+   Visible links:
+   1. https://coverage.readthedocs.io/en/7.4.4
+   2. file:///home/arrif-sondjalim/c++projects/data-science/htmlcov/conftest_py.html
+   3. file:///home/arrif-sondjalim/c++projects/data-science/htmlcov/d_0fb7fec36e5ac5e5___init___py.html
+   4. file:///home/arrif-sondjalim/c++projects/data-science/htmlcov/d_0fb7fec36e5ac5e5_test_logging_py.html
+   5. file:///home/arrif-sondjalim/c++projects/data-science/htmlcov/d_0fb7fec36e5ac5e5_test_read_data_py.html
+   6. file:///home/arrif-sondjalim/c++projects/data-science/htmlcov/d_0fb7fec36e5ac5e5_test_statistik_py.html
+   7. file:///home/arrif-sondjalim/c++projects/data-science/htmlcov/setup_py.html
+   8. https://coverage.readthedocs.io/en/7.4.4
+   9. file:///home/arrif-sondjalim/c++projects/data-science/htmlcov/conftest_py.html
+
+   Hidden links:
+  11. file://localhost/home/arrif-sondjalim/c++projects/data-science/htmlcov/setup_py.html
