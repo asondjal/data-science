@@ -5,7 +5,7 @@ import subprocess
 def pytest_sessionfinish(session):
     """Wird nach Ende der Test-Session aufgerufen."""
     html_report = os.path.join("htmlcov", "index.html")
-    txt_report = "coverage.txt"
+    txt_report = "python_coverage.txt"
 
     if os.path.exists(html_report):
         try:

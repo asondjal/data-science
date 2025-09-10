@@ -12,11 +12,6 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O2")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0 -Wall -Wextra -pedantic")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 --coverage")
 
-# Entfernen überflüssiger Reste der Coverage
-add_custom_target(clean_coverage
-    COMMAND find ${CMAKE_BINARY_DIR} -name "*.gcda" -delete
-)
-
 # Executable fuers Hauptprojekt
 add_executable(data-science
     src/main.cpp
