@@ -103,6 +103,7 @@
 [02.08.2025 11:28:14] [WARNING] FBI has hacked your PC!
 [02.08.2025 11:28:14] [ERROR] WIFI-Connection was interrupted!
 [02.08.2025 11:28:14] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+<<<<<<< HEAD
 [07.09.2025 13:26:21] [INFO] System initialized.
 [07.09.2025 13:26:21] [INFO] System deactivated.
 [07.09.2025 13:26:21] [INFO] System restarted.
@@ -145,3 +146,215 @@
 [07.09.2025 13:55:26] [WARNING] FBI has hacked your PC!
 [07.09.2025 13:55:26] [ERROR] WIFI-Connection was interrupted!
 [07.09.2025 13:55:26] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+=======
+[07.09.2025 20:32:56] [INFO] System initialized.
+[07.09.2025 20:32:56] [INFO] System deactivated.
+[07.09.2025 20:32:56] [INFO] System restarted.
+[07.09.2025 20:32:56] [WARNING] ChatPGT free is expired!
+[07.09.2025 20:32:56] [WARNING] FBI has hacked your PC!
+[07.09.2025 20:32:56] [ERROR] WIFI-Connection was interrupted!
+[07.09.2025 20:32:56] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[08.09.2025 20:26:11] [INFO] System initialized.
+[08.09.2025 20:26:11] [INFO] System deactivated.
+[08.09.2025 20:26:11] [INFO] System restarted.
+[08.09.2025 20:26:11] [WARNING] ChatPGT free is expired!
+[08.09.2025 20:26:11] [WARNING] FBI has hacked your PC!
+[08.09.2025 20:26:11] [ERROR] WIFI-Connection was interrupted!
+[08.09.2025 20:26:11] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[08.09.2025 20:39:10] [INFO] System initialized.
+[08.09.2025 20:39:10] [INFO] System deactivated.
+[08.09.2025 20:39:10] [INFO] System restarted.
+[08.09.2025 20:39:10] [WARNING] ChatPGT free is expired!
+[08.09.2025 20:39:10] [WARNING] FBI has hacked your PC!
+[08.09.2025 20:39:10] [ERROR] WIFI-Connection was interrupted!
+[08.09.2025 20:39:10] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[08.09.2025 20:39:10] [INFO] System initialized.
+[08.09.2025 20:39:10] [INFO] System deactivated.
+[08.09.2025 20:39:10] [INFO] System restarted.
+[08.09.2025 20:39:10] [WARNING] ChatPGT free is expired!
+[08.09.2025 20:39:10] [WARNING] FBI has hacked your PC!
+[08.09.2025 20:39:10] [ERROR] WIFI-Connection was interrupted!
+[08.09.2025 20:39:10] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:05:42] [INFO] System initialized.
+[09.09.2025 22:05:42] [INFO] System deactivated.
+[09.09.2025 22:05:42] [INFO] System restarted.
+[09.09.2025 22:05:42] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:05:42] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:05:42] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:05:42] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:05:42] [INFO] System initialized.
+[09.09.2025 22:05:42] [INFO] System deactivated.
+[09.09.2025 22:05:42] [INFO] System restarted.
+[09.09.2025 22:05:42] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:05:42] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:05:42] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:05:42] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:07:15] [INFO] System initialized.
+[09.09.2025 22:07:15] [INFO] System deactivated.
+[09.09.2025 22:07:15] [INFO] System restarted.
+[09.09.2025 22:07:15] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:07:15] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:07:15] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:07:15] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:07:15] [INFO] System initialized.
+[09.09.2025 22:07:15] [INFO] System deactivated.
+[09.09.2025 22:07:15] [INFO] System restarted.
+[09.09.2025 22:07:15] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:07:15] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:07:15] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:07:15] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:07:36] [INFO] System initialized.
+[09.09.2025 22:07:36] [INFO] System deactivated.
+[09.09.2025 22:07:36] [INFO] System restarted.
+[09.09.2025 22:07:36] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:07:36] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:07:36] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:07:36] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:07:36] [INFO] System initialized.
+[09.09.2025 22:07:36] [INFO] System deactivated.
+[09.09.2025 22:07:36] [INFO] System restarted.
+[09.09.2025 22:07:36] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:07:36] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:07:36] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:07:36] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:07:52] [INFO] System initialized.
+[09.09.2025 22:07:52] [INFO] System deactivated.
+[09.09.2025 22:07:52] [INFO] System restarted.
+[09.09.2025 22:07:52] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:07:52] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:07:52] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:07:52] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:07:52] [INFO] System initialized.
+[09.09.2025 22:07:52] [INFO] System deactivated.
+[09.09.2025 22:07:52] [INFO] System restarted.
+[09.09.2025 22:07:52] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:07:52] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:07:52] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:07:52] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:08:51] [INFO] System initialized.
+[09.09.2025 22:08:51] [INFO] System deactivated.
+[09.09.2025 22:08:51] [INFO] System restarted.
+[09.09.2025 22:08:51] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:08:51] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:08:51] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:08:51] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:08:51] [INFO] System initialized.
+[09.09.2025 22:08:51] [INFO] System deactivated.
+[09.09.2025 22:08:51] [INFO] System restarted.
+[09.09.2025 22:08:51] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:08:51] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:08:51] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:08:51] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:09:00] [INFO] System initialized.
+[09.09.2025 22:09:00] [INFO] System deactivated.
+[09.09.2025 22:09:00] [INFO] System restarted.
+[09.09.2025 22:09:00] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:09:00] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:09:00] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:09:00] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:09:00] [INFO] System initialized.
+[09.09.2025 22:09:00] [INFO] System deactivated.
+[09.09.2025 22:09:00] [INFO] System restarted.
+[09.09.2025 22:09:00] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:09:00] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:09:00] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:09:00] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:13:15] [INFO] System initialized.
+[09.09.2025 22:13:15] [INFO] System deactivated.
+[09.09.2025 22:13:15] [INFO] System restarted.
+[09.09.2025 22:13:15] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:13:15] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:13:15] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:13:15] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:13:15] [INFO] System initialized.
+[09.09.2025 22:13:15] [INFO] System deactivated.
+[09.09.2025 22:13:15] [INFO] System restarted.
+[09.09.2025 22:13:15] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:13:15] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:13:15] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:13:15] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:14:02] [INFO] System initialized.
+[09.09.2025 22:14:02] [INFO] System deactivated.
+[09.09.2025 22:14:02] [INFO] System restarted.
+[09.09.2025 22:14:02] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:14:02] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:14:02] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:14:02] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:14:02] [INFO] System initialized.
+[09.09.2025 22:14:02] [INFO] System deactivated.
+[09.09.2025 22:14:02] [INFO] System restarted.
+[09.09.2025 22:14:02] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:14:02] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:14:02] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:14:02] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:15:21] [INFO] System initialized.
+[09.09.2025 22:15:21] [INFO] System deactivated.
+[09.09.2025 22:15:21] [INFO] System restarted.
+[09.09.2025 22:15:21] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:15:21] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:15:21] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:15:21] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[09.09.2025 22:15:21] [INFO] System initialized.
+[09.09.2025 22:15:21] [INFO] System deactivated.
+[09.09.2025 22:15:21] [INFO] System restarted.
+[09.09.2025 22:15:21] [WARNING] ChatPGT free is expired!
+[09.09.2025 22:15:21] [WARNING] FBI has hacked your PC!
+[09.09.2025 22:15:21] [ERROR] WIFI-Connection was interrupted!
+[09.09.2025 22:15:21] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[10.09.2025 11:57:10] [INFO] System initialized.
+[10.09.2025 11:57:10] [INFO] System deactivated.
+[10.09.2025 11:57:10] [INFO] System restarted.
+[10.09.2025 11:57:10] [WARNING] ChatPGT free is expired!
+[10.09.2025 11:57:10] [WARNING] FBI has hacked your PC!
+[10.09.2025 11:57:10] [ERROR] WIFI-Connection was interrupted!
+[10.09.2025 11:57:10] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[10.09.2025 11:57:10] [INFO] System initialized.
+[10.09.2025 11:57:10] [INFO] System deactivated.
+[10.09.2025 11:57:10] [INFO] System restarted.
+[10.09.2025 11:57:10] [WARNING] ChatPGT free is expired!
+[10.09.2025 11:57:10] [WARNING] FBI has hacked your PC!
+[10.09.2025 11:57:10] [ERROR] WIFI-Connection was interrupted!
+[10.09.2025 11:57:10] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[10.09.2025 12:49:16] [INFO] System initialized.
+[10.09.2025 12:49:16] [INFO] System deactivated.
+[10.09.2025 12:49:16] [INFO] System restarted.
+[10.09.2025 12:49:16] [WARNING] ChatPGT free is expired!
+[10.09.2025 12:49:16] [WARNING] FBI has hacked your PC!
+[10.09.2025 12:49:16] [ERROR] WIFI-Connection was interrupted!
+[10.09.2025 12:49:16] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[10.09.2025 12:49:16] [INFO] System initialized.
+[10.09.2025 12:49:16] [INFO] System deactivated.
+[10.09.2025 12:49:16] [INFO] System restarted.
+[10.09.2025 12:49:16] [WARNING] ChatPGT free is expired!
+[10.09.2025 12:49:16] [WARNING] FBI has hacked your PC!
+[10.09.2025 12:49:16] [ERROR] WIFI-Connection was interrupted!
+[10.09.2025 12:49:16] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[10.09.2025 12:49:33] [INFO] System initialized.
+[10.09.2025 12:49:33] [INFO] System deactivated.
+[10.09.2025 12:49:33] [INFO] System restarted.
+[10.09.2025 12:49:33] [WARNING] ChatPGT free is expired!
+[10.09.2025 12:49:33] [WARNING] FBI has hacked your PC!
+[10.09.2025 12:49:33] [ERROR] WIFI-Connection was interrupted!
+[10.09.2025 12:49:33] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[10.09.2025 12:49:33] [INFO] System initialized.
+[10.09.2025 12:49:33] [INFO] System deactivated.
+[10.09.2025 12:49:33] [INFO] System restarted.
+[10.09.2025 12:49:33] [WARNING] ChatPGT free is expired!
+[10.09.2025 12:49:33] [WARNING] FBI has hacked your PC!
+[10.09.2025 12:49:33] [ERROR] WIFI-Connection was interrupted!
+[10.09.2025 12:49:33] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[10.09.2025 13:36:22] [INFO] System initialized.
+[10.09.2025 13:36:22] [INFO] System deactivated.
+[10.09.2025 13:36:22] [INFO] System restarted.
+[10.09.2025 13:36:22] [WARNING] ChatPGT free is expired!
+[10.09.2025 13:36:22] [WARNING] FBI has hacked your PC!
+[10.09.2025 13:36:22] [ERROR] WIFI-Connection was interrupted!
+[10.09.2025 13:36:22] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+[10.09.2025 13:36:22] [INFO] System initialized.
+[10.09.2025 13:36:22] [INFO] System deactivated.
+[10.09.2025 13:36:22] [INFO] System restarted.
+[10.09.2025 13:36:22] [WARNING] ChatPGT free is expired!
+[10.09.2025 13:36:22] [WARNING] FBI has hacked your PC!
+[10.09.2025 13:36:22] [ERROR] WIFI-Connection was interrupted!
+[10.09.2025 13:36:22] [DEBUG] WIFI-Connection was interrupted by HTTP-Port 241
+>>>>>>> 547ec7f (Final changes for CI/CD)
