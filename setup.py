@@ -15,7 +15,7 @@ ext_modules = [
         include_dirs=[pybind11.get_include(), "inc"],
         language="c++",
         libraries=["poppler-cpp", "tinyxml2"],
-        extra_compile_args=["-O3", "-std=c++17"],  # optional optimieren
+        extra_compile_args=["-O3", "-std=c++17"],
     ),
 ]
 

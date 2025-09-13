@@ -3,7 +3,6 @@
 ## **Ziele**
 
 - Klasse ReadData: Einführung der Dateiformate HTML sowie XML und Anpassung der Datenspeicherung
-- Mathe-Kenntnisse: Umgang mit Matrixoperationen verbessern, Fokus liegt auf der linearen Algebra sowie Numerik
 - Dataflow: Datensätze beschreiben sowie interpretieren
 
 ## **Design**
@@ -37,8 +36,3 @@
 ## **Verbesserung vom CI/CD**
 
 - .pre-commit-config.yaml: vor jedem Commit erfolgt ein Style-Chec
-
-## Fehlende Aufgaben
-
-- Mathe-Kenntnisse
-- Data-Flow

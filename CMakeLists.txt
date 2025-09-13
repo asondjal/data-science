@@ -12,12 +12,6 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O2")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -O0 -Wall -Wextra -pedantic")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0 --coverage")
 
-# Entfernen überflüssiger Reste der Coverage
-add_custom_target(clean_coverage
-    COMMAND find ${CMAKE_BINARY_DIR} -name "*.gcda" -delete
-)
-
-# Executable fuers Hauptprojekt
 add_executable(data-science
     src/main.cpp
     src/read_data.cpp
@@ -31,7 +25,6 @@ target_link_libraries(data-science PRIVATE poppler-cpp)
 target_link_libraries(data-science PRIVATE tinyxml2)
 target_compile_options(data-science PRIVATE -Wall -Wextra -pedantic)
 
-# Executable zum Testen der C++-Klassen
 add_executable(cpp_tests
     src/read_data.cpp
     src/statistik.cpp
@@ -45,7 +38,6 @@ add_executable(cpp_tests
     cpp_tests/test_arithmetic.cpp
 )
 
-# Coverage explizit für cpp_tests
 target_compile_options(cpp_tests PRIVATE ${COVERAGE_COMPILE_FLAGS})
 target_link_libraries(cpp_tests PRIVATE gcov)
 
@@ -66,7 +58,6 @@ include_directories(${Python3_INCLUDE_DIRS})
 include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${CMAKE_SOURCE_DIR}/pybind11/include)
 
-# Executable fuer die Integration von C++ in Python
 pybind11_add_module(intersection
     bindings/python_bindings.cpp
 

@@ -51,5 +51,5 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}/build
         run: |
           for file in python_tests/test_*.py; do
-            pytest "$file" --ignore=pybind11
+            pytest "$file"
           done
