@@ -18,7 +18,6 @@ add_executable(data-science
     src/read_data.cpp
     src/statistik.cpp
     src/logging.cpp
-    src/arithmetic.cpp
 )
 
 target_include_directories(data-science PRIVATE ${PROJECT_SOURCE_DIR}/inc)
@@ -31,13 +30,11 @@ add_executable(cpp_tests
     src/read_data.cpp
     src/statistik.cpp
     src/logging.cpp
-    src/arithmetic.cpp
 
     cpp_tests/main.cpp
     cpp_tests/test_read_data.cpp
     cpp_tests/test_statistik.cpp
     cpp_tests/test_logging.cpp
-    cpp_tests/test_arithmetic.cpp
 )
 
 # Coverage explizit für cpp_tests
