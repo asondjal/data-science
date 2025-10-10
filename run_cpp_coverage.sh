@@ -6,10 +6,10 @@ set -e  # Script beendet sich bei Fehlern
 REPORT_DIR="c++_coverage"
 mkdir -p "$REPORT_DIR"
 
-# Coverage-Berichte erzeugen
+echo "📈 Erzeuge Coverage-Report..."
 gcovr -r . \
-  --filter='src/' \
   --filter='cpp_tests/' \
+  --exclude='src/' \
   --exclude='pybind11/' \
   --exclude='bindings/' \
   --exclude='external/' \
