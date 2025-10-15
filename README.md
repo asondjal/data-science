@@ -37,8 +37,3 @@
 ## **Verbesserung vom CI/CD**
 
 - .pre-commit-config.yaml: vor jedem Commit erfolgt ein Style-Chec
-
-## Fehlende Aufgaben
-
-- Mathe-Kenntnisse
-- Data-Flow
